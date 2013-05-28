@@ -11,7 +11,36 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130428224726) do
+ActiveRecord::Schema.define(:version => 20130429162902) do
+
+  create_table "photographs", :force => true do |t|
+    t.string   "filename"
+    t.string   "path"
+    t.boolean  "featured"
+    t.integer  "coolness"
+    t.boolean  "discontinued"
+    t.string   "caption"
+    t.string   "gps"
+    t.string   "make"
+    t.string   "model"
+    t.datetime "photographed"
+    t.string   "shutter"
+    t.string   "f_stop"
+    t.string   "aperture"
+    t.integer  "iso"
+    t.string   "focal_length"
+    t.string   "lens"
+    t.text     "flash"
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
+    t.integer  "project_id"
+  end
+
+  create_table "projects", :force => true do |t|
+    t.string   "name",       :default => ""
+    t.datetime "created_at",                 :null => false
+    t.datetime "updated_at",                 :null => false
+  end
 
   create_table "roles", :force => true do |t|
     t.string   "name"

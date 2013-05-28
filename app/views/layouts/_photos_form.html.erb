@@ -1,0 +1,24 @@
+
+
+<table>
+	<tr>
+		<th></th>
+		<th>Filename</th>
+		<th>Out?</th>
+		<th>Cool?</th>
+		<th>Shot?</th>
+		<th>Project</th>
+		<th></th>
+	</tr> 
+<%= simple_form_for @photographs, :url => project_photographs_path(@project) do |f| %>
+  <tr>
+  	<td></td>
+  	<td><%= f.input :filename %></td>
+  	<td><%= f.radio :discontinued %></td>
+  	<td><%= f.input :coolness %></td>
+  	<td><%= f.input :photographed %></td>
+  	<td><%= f.association :project %></td>
+  </tr>
+</table>
+ <%= f.button :submit %>
+<% end %>

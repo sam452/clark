@@ -1,5 +1,6 @@
 class HomeController < ApplicationController
   def index
-    @users = User.all
+    @project = Project.find(1)
+   @photographs = Photograph.where(:project_id => @project.id)
   end
 end

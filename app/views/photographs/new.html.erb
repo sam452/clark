@@ -1,0 +1,22 @@
+<h1>Add a photograph</h1>
+
+<%= simple_form_for @photograph, :url => project_photographs_path(@project) do |f| %>
+  <%= f.input :filename %>
+  <%= f.input :path %>
+  <%= f.input :discontinued %>
+  <%= f.input :caption %>
+  <%= f.input :gps %>
+  <%= f.input :coolness %>
+  <%= f.input :make %>
+  <%= f.input :model %>
+  <%= f.input :photographed %>
+  <%= f.input :shutter %>
+  <%= f.input :f_stop %>
+  <%= f.input :aperture %>
+  <%= f.input :iso %>
+  <%= f.input :focal_length %>
+  <%= f.input :lens %>
+  <%= f.input :flash %>
+  <%= f.association :project %>
+  <%= f.button :submit %>
+<% end %>

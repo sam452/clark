@@ -1,0 +1,7 @@
+<h2>New project</h2>
+<%= simple_form_for @project do |f| %>
+  <%= f.error_notification %>
+  <%= display_base_errors @project %>
+  <%= f.input :name, :autofocus => true %>
+  <%= f.button :submit, 'New project', :class => 'btn-primary' %>
+<% end %>
